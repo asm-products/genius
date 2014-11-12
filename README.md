@@ -1,7 +1,7 @@
 Genius
 ========
 
-# Clarity.fm for creatives
+## Clarity.fm for creatives
 
 This is a product being built by the Assembly community. You can help push this idea forward by visiting https://assembly.com/genius.
 
