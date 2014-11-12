@@ -1,4 +1,4 @@
-geniuslp
+Genius
 ========
 
 Clarity.fm for creatives
