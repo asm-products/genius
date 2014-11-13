@@ -19,6 +19,11 @@ a:hover {
   border: 1px solid #fff;
 }
 
+.alert h4 {
+  padding:0; 
+  margin:0; 
+  text-shadow: 0 0 transparent;
+}
 
 /*
  * Base structure
