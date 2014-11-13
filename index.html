@@ -1,146 +1,109 @@
 <!DOCTYPE html>
-<!--[if lt IE 8]>      <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
-<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
-<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
-<head>
-  <meta charset="utf-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-  <title>Genius</title>
-  <meta name="description" content="">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" href="https://d8izdk6bl4gbi.cloudfront.net/96x96/g_center/https://d1015h9unskp4y.cloudfront.net/attachments/1d7af0bb-03d9-41cb-a100-662d6120f265/logo-letter-genius-3.jpg">
 
-  <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css" type="text/css">
-  <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Lato:400,700,900" type="text/css">
-  <link rel="stylesheet" href="style.css" type="text/css">
-</head>
-<body>
-  <div class="site-wrapper">
-    <div class="site-wrapper-inner">
-      <svg class="spinner" width="65px" height="65px" viewBox="0 0 66 66" xmlns="http://www.w3.org/2000/svg">
-        <circle class="path" fill="none" stroke-width="6" stroke-linecap="round" cx="33" cy="33" r="30"></circle>
-      </svg>
-    </div>
-  </div>
+    <title>Genius</title>
+    <!-- Google Fonts -->
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans:800|Roboto' rel='stylesheet' type='text/css'>
 
-  <script src="//cdnjs.cloudflare.com/ajax/libs/handlebars.js/2.0.0-alpha.4/handlebars.min.js"></script>
-  <script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
-  <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+    <!-- Bootstrap core CSS -->
+    <link href="./css/bootstrap.min.css" rel="stylesheet">
 
-  <script id="template" type="text/x-handlebars-template">
-    <div class="cover-container">
-      <div class="masthead clearfix">
-        <div class="inner">
-          <h1 class="masthead-brand"><a href="https://assembly.com/{{slug}}">{{name}}</a></h1>
-        </div>
-      </div>
+    <!-- Custom styles for this template -->
+    <link href="./css/cover.css" rel="stylesheet">
 
-      <div class="inner cover">
-        {{#if poster_image_url}}
-          <a href="https://assembly.com/{{slug}}">
-            <img src={{poster_image_url}} width="300px">
-          </a>
-        {{/if}}
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
 
-        <h2 class="cover-heading">{{pitch}}</h2>
+  </head>
 
-        {{#if description}}
-          <p class="lead">{{description}}</p>
-        {{/if}}
+  <body>
 
-        <style>
-          .alert {
-             z-index: 9000; position: absolute; width: 300px; margin-left: -180px; left: 50%;
-          }
-        </style>
+    <div class="site-wrapper">
 
-        <div class="alert alert-success alert-dismissible" role="alert" style="display: none;">
-          <button type="button" class="close" data-dismiss="alert">
-            <span aria-hidden="true">&times;</span>
-            <span class="sr-only">Close</span>
-          </button>
-          <h3>Successfully subscribed to {{name}} updates</h3>
-        </div>
+      <div class="site-wrapper-inner">
 
-        <div class="alert alert-danger alert-dismissible" role="alert" style="display: none;">
-          <button type="button" class="close" data-dismiss="alert">
-            <span aria-hidden="true">&times;</span>
-            <span class="sr-only">Close</span>
-          </button>
-          <h3>There was a problem adding you to the mailing list. Please try again later.</h3>
-        </div>
+        <div class="cover-container">
 
-        <form id="email-signup" class="form-inline" role="form" data-url="https://assembly.com/api/products/{{slug}}/potential_users">
-          <div class="form-group form-group-lg">
-            <label class="sr-only" for="email">Email address</label>
-            <input class="email form-control input-lg" type="email" name="email" placeholder="Email me when it's ready" style="min-width: 300px; text-align: center;" autofocus="true">
+          <div class="masthead clearfix">
+            <div class="inner">
+              <h3 class="masthead-brand"><img src="https://d8izdk6bl4gbi.cloudfront.net/96x96/g_center/https://d1015h9unskp4y.cloudfront.net/attachments/1d7af0bb-03d9-41cb-a100-662d6120f265/logo-letter-genius-3.jpg"></h3>
+           <!--    <ul class="nav masthead-nav">
+                <li class="active"><a href="index.html#">Home</a></li>
+                <li><a href="index.html#">Features</a></li>
+                <li><a href="index.html#">Contact</a></li>
+              </ul> -->
+            </div>
           </div>
-          <button type="submit" class="btn btn-default btn-lg">&gt;</button>
-        </form>
 
-        <h2 class="cover-heading">Core Team</h2>
-        <ul class="list-inline">
-          {{#each core_team}}
-            <li>
-              <a href="https://assembly.com/users/{{username}}">
-                <img src={{avatar_url}} class="img-circle">
-                <h5>{{username}}</h5>
-              </a>
-            </li>
-          {{/each}}
-        </ul>
+          <div class="inner cover">
+            <h1 class="cover-heading">On demand advice for creatives</h1>
+            <p class="lead">Genius is a marketplace that connects creatives with top professionals and industry experts.</p>
 
-      </div>
-      <div class="mastfoot">
-        <div class="inner">
-          <p>Made with ♥ on <a href="//assembly.com">Assembly</a></p>
-          <p>Layout based on the Cover template for <a href="http://getbootstrap.com">Bootstrap</a>, by <a href="https://twitter.com/mdo">@mdo</a>.</p>
+                <div class="alert alert-success alert-dismissible" role="alert" style="display: none;">
+                  <button type="button" class="close" data-dismiss="alert">
+                    <span aria-hidden="true">×</span>
+                    <span class="sr-only">Close</span>
+                  </button>
+                  <h4>Successfully subscribed to Genius updates</h4>
+                </div>
+
+
+                <div class="alert alert-danger alert-dismissible" role="alert" style="display: none;">
+                  <button type="button" class="close" data-dismiss="alert">
+                    <span aria-hidden="true">×</span>
+                    <span class="sr-only">Close</span>
+                  </button>
+                  <h4>There was a problem adding you to the mailing list. Please try again later.</h4>
+                </div>
+
+            <form id="email-signup" class="form-inline" role="form" data-url="https://assembly.com/api/products/genius/potential_users">
+            <div class="input-group">
+              <label class="sr-only" for="email">Email address</label>
+              <input type="email" name="email" class="form-control" placeholder="what's your email?">
+              <span class="input-group-btn">
+              <button class="btn btn-danger" type="submit">Get on the beta list</button>
+              </span>
+            </div>
+            </form>
+
+          </div>
+
+          <div class="mastfoot">
+            <div class="inner">
+              <p>&copy; 2014 Genius. Built on <a href="https://assembly.com/genius" target="_blank">Assembly</a> by <a href="https://assembly.com/genius/partners" target="_blank">awesome people</a>.</p>
+            </div>
+          </div>
+
         </div>
+
       </div>
+
     </div>
-  </script>
 
-  <script>
-    $(document).ready(function() {
-      $.get('https://assembly.com/api/products/genius/info')
-        .done(function(data) {
-          var name = data.name;
-          var slug = data.slug;
-          var pitch = data.pitch;
-          var description = data.description;
-          var poster_image_url = data.poster_image_url;
-          var core_team = data.core_team;
-
-          if (poster_image_url.indexOf('default_poster.jpg') > -1) {
-            poster_image_url = 'https://assembly.com' + poster_image_url;
-          }
-
-          document.title = name;
-
-          var source = $('#template').html();
-          var template = Handlebars.compile(source);
-          var html = template({
-            name: name,
-            slug: slug,
-            pitch: pitch,
-            description: description,
-            poster_image_url: poster_image_url,
-            core_team: core_team || []
-          });
-
-          $('.site-wrapper-inner').html(html);
-
-          // attach submit listener
-          $('#email-signup').submit(function(e) {
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <script src="./js/bootstrap.min.js"></script>
+    <script>
+$(document).ready(function() { 
+$('#email-signup').submit(function(e) {
             e.preventDefault();
 
             subscribe($(this));
-          });
-        }).fail(function(err) {
-          console.error(err);
         });
-    });
 
-    function subscribe($form) {
+function subscribe($form) {
       var path = $form.data('url');
       var data = {
         email: $form.find('input[name="email"]').val()
@@ -152,14 +115,15 @@
         .done(function(data) {
           $form.find('input[name="email"]').val('');
           $('.alert-success').fadeTo(100, 1);
-          $('.alert-success').fadeTo(10*1000, 0);
+          $('.alert-success').fadeTo(10*500, 0);
         })
         .fail(function(err) {
           $('.alert-danger').fadeTo(100, 1);
-          $('.alert-danger').fadeTo(10*1000, 0);
+          $('.alert-danger').fadeTo(10*100, 0);
         });
     }
 
-  </script>
-</body>
+  });
+    </script>
+  </body>
 </html>
